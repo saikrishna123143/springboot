@@ -1,0 +1,109 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>
+			resposnse message
+		</title>
+	</head>
+	<body>
+	<center>
+		<table cellspacing="20px"cellpadding="5px"border="2px">
+		<tr>
+		<td>
+	<p>id of the product is </p>
+	</td>
+	<td>
+	<p th:text="${users.id}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>name of the product is </p>
+	</td>
+	<td>
+	<p th:text="${users.name}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>brand of the product is </p>
+	</td>
+	<td>
+	<p th:text="${users.brand}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>product made in</p>
+	</td>
+	<td>
+	<p th:text="${users.madein}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>price of the product is </p>
+	</td>
+	<td>
+	<p th:text="${users.price}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>quantity of the product is </p>
+   </td>
+   <td>
+	<p th:text="${users.quantity}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>discountrate on the product is </p>
+	</td>
+	<td>
+	<p th:text="${users.discountrate}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>discount amount is</p>
+	</td>
+	<td>
+	<p th:text="${users.discountamount}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>offerprice is </p>
+	</td>
+	<td>
+	<p th:text="${users.offerprice}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>taxrate is </p>
+	</td>
+	<td>
+	<p th:text="${users.taxrate}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>finalprice is </p>
+	</td>
+	<td>
+	<p th:text="${users.finalprice}"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>stock value is </p>
+	</td>
+	<td>
+	<p th:text="${users.stockvalue}"></p>
+	</td>
+	</tr>
+		</table>
+		</center>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        *
+        {
+            background-color:rgb(198, 235, 157);
+        }
+        .ico
+        {
+            font-size:100px;
+            color:blue;
+        }
+        .insta
+        {
+            font-size:100px;
+            color:crimson; 
+        }
+        .you
+        {
+            font-size:100px;
+            color:rgb(220, 20, 20);   
+        }
+        .twi
+        {
+            font-size:100px;
+            color:blue;  
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="font-size:40px;text-align:center;">CONTACT HERE</h1>
+    <hr>
+    <br>
+    <br>
+    <div style="margin:40px;text-align:center;">
+    <a href="https://www.facebook.com/groups/262471704586337" style="padding:80px;"target="_blank"><i class="bi bi-facebook ico"></i></a>
+    <a href="https://www.instagram.com/sathyatechnologies/" style="padding:80px;"target="_blank"><i class="bi bi-instagram insta"></i></a>
+    <a href="https://sathyatech.com/" style="padding:80px;" target="_blank"><i class="bi bi-youtube you"></i></a>
+    <a href="https://sathyatech.com/" style="padding:80px;"target="_blank"><i class="bi bi-twitter twi"></i></a>
+   </div>
+</body>
+</html>

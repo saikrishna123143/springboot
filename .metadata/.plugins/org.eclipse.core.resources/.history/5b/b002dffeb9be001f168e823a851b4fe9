@@ -1,0 +1,26 @@
+package com.employee.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.employee.entity.EmployeeEntity;
+import com.employee.model.EmployeeModel;
+import com.employee.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService {
+	@Autowired
+EmployeeRepository employeeRepository;
+public void store(EmployeeModel employeeModel)
+{
+	EmployeeEntity employeeEntity=new EmployeeEntity();
+	employeeEntity.setName(employeeModel.getName());
+	employeeEntity.setRole(employeeModel.getRole());
+	employeeEntity.setSalary(employeeModel.getSalary());
+	employeeEntity.setLocation(employeeModel.getLocation());
+	employeeEntity.set
+	
+	
+}
+	
+}

@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>
+			resposnse message
+		</title>
+	</head>
+	<body>
+		<div style="color:red;">
+	<p>id of the product is </p><p th:text="${users.name}"></p>
+	<p>name of the product is </p><p th:text="${users.name}"></p>
+	<p>brand of the product is </p><p th:text="${users.brand}"></p>
+	<p>product made in</p><p th:text="${users.madein}"></p>
+	<p>price of the product is </p><p th:text="${users.price}"></p>
+	<p>quantity of the product is </p><p th:text="${users.quantity}"></p>
+	<p>discountrate on the product is </p><p th:text="${users.discountrate}"></p>
+	<p>discount amount is</p><p th:text="${users.discountamount}"></p>
+	<p>offerprice is </p><p th:text="${users.offerprice}"></p>
+	<p>taxrate is </p><p th:text="${users.taxrate}"></p>
+	<p>finalprice is </p><p th:text="${users.finalprice}"></p>
+	<p>stock value is </p><p th:text="${users.stockvalue}"></p>
+		</div>
+	</body>
+</html>

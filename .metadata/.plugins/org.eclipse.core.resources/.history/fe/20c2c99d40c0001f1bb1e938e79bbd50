@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Divs Layout</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="inputDiv">
+        <div class="input-container">
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" id="employeeId" name="id" placeholder="Enter Employee ID">
+        </div>
+    </div>
+    <div class="container" id="codeDiv">
+      <div th:if="${balayya!=null}" class="form-container2">
+          <h3>product details</h3>
+          <strong>ID:</strong><span th:text="${balayya.id}"></span>
+          <strong>Name:</strong><span th:text="${balayya.name}"></span>
+          <strong>Brand:</strong><span th:text="${balayya.role}"></span>
+          <strong>Madein:</strong><span th:text="${balayya.salary}"></span>
+          <strong>Price:</strong><span th:text="${balayya.location}"></span>
+          <strong>Quantity:</strong><span th:text="${balayya.shift}"></span>
+          <strong>Discount rate:</strong><span th:text="${balayya.daPer}"></span>
+          <strong>Discount price:</strong><span th:text="${balayya.pfPer}"></span>
+          <strong>Offerprice:</strong><span th:text="${balayya.da}"></span>
+          <strong>Tax rate:</strong><span th:text="${balayya.pf}"></span>
+          <strong>Final price:</strong><span th:text="${balayya.netsal}"></span>
+        </div>
+        <div th:if="${balayya==null}">
+            <p>No product found with the  given id</p>
+        </div>
+    </div>
+</body>
+</html>

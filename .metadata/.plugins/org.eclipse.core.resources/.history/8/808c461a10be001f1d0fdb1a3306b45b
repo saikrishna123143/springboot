@@ -1,0 +1,39 @@
+package com.employee.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.employee.model.EmployeeModel;
+
+@Controller
+public class EmployeeController {
+    @GetMapping("/employeeform")
+	public String generateform()
+	{
+    	return "empform";
+	}
+    @PostMapping("/employeedetails")
+    public String employeeDetails(EmployeeModel employeeModel,Model model)
+    {
+    	model.addAttribute("users",employeeModel);
+    	return "success";
+    }
+    @GetMapping("")
+    public String home()
+    {
+      return "home";	
+    }
+    @GetMapping("/contact")
+    public String contact()
+    {
+      return "contact";	
+    }
+    @GetMapping("/register")
+    public String register()
+    {
+      return "register";	
+    }
+    
+}

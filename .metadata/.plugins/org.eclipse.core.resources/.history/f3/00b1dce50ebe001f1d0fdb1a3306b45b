@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        a
+        {
+            text-decoration:none;
+        }
+        button{
+            color:rgb(4, 98, 4);
+        }
+        button:hover{
+            transition:1s;
+           color:white;
+           Background-color:rgb(2, 91, 35);
+           cursor:grab;
+        }
+       
+    </style>
+</head>
+<body link="black" alink="black" vlink="black" style="background-color:rgb(157, 181, 157);">
+    <center><h1 Style="color:rgb(2, 91, 35);font-family:calibri;">Employee Management System</h1></center>
+    <br>
+    <div Style="display:flex;Background-color:rgb(190, 109, 109);height:40px;width:100%;">
+   <span Style="flex:1; padding:10px 50px 0 200px;"><a href=""><button>Home</button></a></span>&emsp;&emsp;&emsp;
+   <span Style="flex:1; padding:10px 50px 0 0px;"><a href="contact.html" target="my_a"><button>Contact</button></a></span>&emsp;&emsp;&emsp;
+   <span Style="flex:1; padding:10px 50px 0 0px;"><a href="register.html" target="my_a"><button>Register</button></a></span>&emsp;&emsp;&emsp;
+   <span Style="flex:1; padding:10px 50px 0 0px;"><a href="login.html" target="my_a"><button>Login</button></a></span>&emsp;&emsp;&emsp;
+   </div>
+   <br>
+   <div>
+    <iframe src="statci/images/homei.webp" name="my_a"alt="" width="1200px" height="825px" style="margin:0 10%; border:2px rgb(6, 145, 78) solid;object-fit:fill;">
+   </div>
+</body>
+</html>

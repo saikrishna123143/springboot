@@ -1,0 +1,71 @@
+package com.employee.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.employee.model.EmployeeModel;
+import com.employee.model.UserModel;
+import com.employee.repository.UserRepository;
+import com.employee.service.UserService;
+
+@Controller
+public class EmployeeController {
+    @GetMapping("/employeeform")
+	public String generateform()
+	{
+    	return "empform";
+	}
+    @PostMapping("/employeedetails")
+    public String employeeDetails(EmployeeModel employeeModel,Model model)
+    {
+    	model.addAttribute("users",employeeModel);
+    	return "success";
+    }
+    @GetMapping("")
+    public String home()
+    {
+      return "home";	
+    }
+    @GetMapping("/contact")
+    public String contact()
+    {
+      return "contact";	
+    }
+    @GetMapping("/register")
+    public String register()
+    {
+      return "register";	
+    }
+    @Autowired
+    UserRepository userRepository;
+    @PostMapping("/reg")
+    public String reg(UserModel userModel)
+    {
+    	userRepository.save(userModel);
+    	return "success1";
+    }
+    @GetMapping("/login")
+    public String login()
+    {
+      return "login";	
+    }
+    @Autowired
+    UserService userService;
+    @PostMapping("/log")
+    public String log(String name,String password)
+    {
+      boolean a=userService.loginService(name,password);
+      if(a)
+      {
+    	  
+    	return "employee";
+      }
+      else
+      {
+    	  return "success3";
+      }
+    }
+}

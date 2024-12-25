@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>
+			resposnse message
+		</title>
+	</head>
+	<body>
+		
+		<span th:text="${users.name}"></span>
+		<span th:text="${users.brand}"></span>
+		<span th:text="${users.madein}"></span>
+		<span th:text="${users.price}"></span>
+		<span th:text="${users.quantity}"></span>
+		
+		
+	</body>
+</html>

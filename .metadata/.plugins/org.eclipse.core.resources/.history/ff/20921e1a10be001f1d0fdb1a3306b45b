@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        *
+        {
+            font-size:30px;
+            background-color:rgb(198, 235, 157);
+        }
+        input,select,textarea
+        {
+            border:2px red solid;
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+  
+    <center>
+   <h1 Style="font-size:40px;">Register here</h1>
+    </center>
+   
+    <center>
+    <table>
+        <form action="/register" method="post">
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter the name" id="uname" name="name" pattern="[A-Za-z]{3}">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" placeholder="Enter the password" id="password" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Email:
+                </td>
+                <td>
+                   <input type="email" placeholder="Enter the Email" id="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    mobile number:
+                </td>
+                <td>
+                    <input type="number" placeholder="Enter the mobile number" id="mobile" name="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit" value="submit" style="background-color:rgb(81, 152, 81)">
+                </td>
+            </tr>
+        </form>
+    </table>
+    </center>
+</body>
+</html>

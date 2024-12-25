@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Product by ID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Search Product</h2>
+        <form action="/search-product" method="post">
+            <label for="product-id">Enter Product ID:</label>
+            <input type="number" id="product-id" name="id" placeholder="Product ID" required>
+            <button type="submit">Search</button>
+        </form>
+        <div th:if="${balayya!=null}">
+          <h3>product details</h3>
+          <p><strong>ID:</strong><p><span th:text="${balayya.id}"></span>
+          <p><strong>Name:</strong><p><span th:text="${balayya.name}"></span>
+          <p><strong>Brand:</strong><p><span th:text="${balayya.brand}"></span>
+          <p><strong>Madein:</strong><p><span th:text="${balayya.madein}"></span>
+          <p><strong>Price:</strong><p><span th:text="${balayya.price}"></span>
+          <p><strong>Quantity:</strong><p><span th:text="${balayya.quantity}"></span>
+          <p><strong>Discount rate:</strong><p><span th:text="${balayya.discountrate}"></span>
+          <p><strong>Discount price:</strong><p><span th:text="${balayya.discountamount}"></span>
+          <p><strong>Offerprice:</strong><p><span th:text="${balayya.offerprice}"></span>
+          <p><strong>Tax rate:</strong><p><span th:text="${balayya.taxrate}"></span>
+          <p><strong>Final price:</strong><p><span th:text="${balayya.finalprice}"></span>
+          <p><strong>Stock value:</strong><p><span th:text="${balayya.stockvalue}"></span>
+        </div>
+    </div>
+</body>
+</html>

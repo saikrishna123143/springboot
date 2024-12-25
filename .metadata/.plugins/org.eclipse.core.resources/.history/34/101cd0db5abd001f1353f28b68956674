@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>
+			resposnse message
+		</title>
+	</head>
+	<body>
+		<h1>
+		jaibalayya
+		</h1>
+	</body>
+</html>

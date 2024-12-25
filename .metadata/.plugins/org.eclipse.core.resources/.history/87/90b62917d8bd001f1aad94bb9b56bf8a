@@ -1,0 +1,11 @@
+package com.springbootmvc.service;
+
+import org.springframework.stereotype.Service;
+
+import com.springbootmvc.entity.ProductEntity;
+import com.springbootmvc.model.ProductModel;
+
+@Service
+public class ProductService {
+	
+}

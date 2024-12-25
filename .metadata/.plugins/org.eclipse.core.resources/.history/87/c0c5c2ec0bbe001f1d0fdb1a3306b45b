@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        *
+        {
+            font-size:30px;
+            background-color:rgb(198, 235, 157);
+        }
+        input,select,textarea
+        {
+            border:2px red solid;
+            color:brown;
+        }
+    </style>
+    <script>
+        function f1()
+        {
+            window.alert(document.getElementById("uname").value+" your details are submitted");
+        }
+    </script>
+</head>
+<body>
+  
+    <center>
+   <h1 Style="font-size:40px;">Register here</h1>
+    </center>
+   
+    <center>
+    <table>
+        <form action="register" method="post">
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter the name" id="uname" name="uname" pattern="[A-Za-z]{3}">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" placeholder="Enter the password" id="pass" name="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Email:
+                </td>
+                <td>
+                   <input type="email" placeholder="Enter the Email address" id="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    <input type="radio" name="gender" value="male">male
+                    <input type="radio" name="gender" value="female">female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    mobile number:
+                </td>
+                <td>
+                    <input type="number" placeholder="Enter the mobile number" id="mobile" name="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    State:
+                </td>
+                <td>
+                    <select>
+                        <option>andhra pradesh</option>
+                        <option>telangana</option>
+                        <option>goa</option>
+                        <option>andaman</option>
+                        <option>jammu&kasmir</option>
+                        <option>chatigarh</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    country:
+                </td>
+                <td>
+                    <select>
+                        <option>india</option>
+                        <option>pakistan</option>
+                        <option>afghanistan</option>
+                        <option>bangkok</option>
+                        <option>thailand</option>
+                        <option>malasia</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <textarea name="addr" id="addr">
+
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="submit" value="submit" style="background-color:rgb(81, 152, 81)" onclick="f1()">
+                </td>
+            </tr>
+        </form>
+    </table>
+    </center>
+</body>
+</html>

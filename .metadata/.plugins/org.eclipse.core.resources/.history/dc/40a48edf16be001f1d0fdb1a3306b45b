@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *
+        {
+            font-size:30px;
+        }
+        input{
+            border:2px red solid;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1 style="font-size:40px;">
+        login page
+    </h1>
+    <table cellpadding="10px">
+        <form action="/log" method="post" id="form1">
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    <input type="name" placeholder="Enter the name" name="name" id="name">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" placeholder="Enter the password" name="pass" id="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="emphome.html"><input type="submit" value="login" style="background-color:rgb(81, 152, 81)"></a>
+                    <input type="reset" value="reset" style="background-color:rgb(81, 152, 81)">
+                </td>
+              
+            </tr>
+        </form>
+    </table>
+</center>
+<script>
+</script>
+</body>
+</html>

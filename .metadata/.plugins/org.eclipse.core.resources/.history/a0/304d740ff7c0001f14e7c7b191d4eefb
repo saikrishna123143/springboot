@@ -1,0 +1,21 @@
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<title>form details</title>
+	</head>
+	<body>
+		<center>
+			<h1>edit form</h1>
+		<form action="" th:object="${product}" method="post">
+		
+			<input type="text" placeholder="enter the productname" style="height:50px;width:400px;font-size: 20px;"name="name" th:field="${product.name}"><br><br>
+			<input type="text" placeholder="enter the brand"style="height:50px;width:400px;font-size: 20px;"name="brand" th:field="${product.brand}"><br><br>
+			<input type="text" placeholder="enter the madein"style="height:50px;width:400px;font-size: 20px;"name="madein" th:field="${product.madein}"><br><br>
+			<input type="number" placeholder="enter the price"style="height:50px;width:400px;font-size: 20px;"name="price" th:field="${product.price}"><br><br>
+			<input type="number" placeholder="enter the quantity"style="height:50px;width:400px;font-size: 20px;"name="quantity" th:field="${product.quantity}"><br><br>
+			<input type="number" placeholder="enter the discountrate"style="height:50px;width:400px;font-size: 20px;"name="discountrate" th:field="${product.discountrate}"><br><br>
+			<button type="submit">submit</button>
+			
+		</form>
+		</center>
+	</body>
+</html>

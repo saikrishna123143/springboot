@@ -1,0 +1,27 @@
+package com.springbootmvc.service;
+
+import org.springframework.stereotype.Service;
+
+import com.springbootmvc.entity.ProductEntity;
+import com.springbootmvc.model.ProductModel;
+
+@Service
+public class ProductService {
+	ProductEntity productEntity=new ProductEntity();
+	public ProductEntity productLogic(ProductModel productModel)
+	{
+		productEntity.setId(420);
+		productEntity.setName(productModel.getName());
+		productEntity.setBrand(productModel.getBrand());
+		productEntity.setMadein(productModel.getMadein());
+		productEntity.setPrice(productModel.getPrice());
+		productEntity.setQuantity(productModel.getQuantity());
+		productEntity.setDiscountrate(20.00);
+		productEntity.setDiscountamount(((productEntity.getPrice())*(productEntity.getDiscountrate()))/100);
+		productEntity.setOfferprice(productEntity.getPrice()-productEntity.getDiscountamount());
+		productEntity.setTaxrate(18.00);
+		productEntity.setFinalprice(productEntity.getOfferprice()+(productEntity.getTaxrate()*productEntity.getOfferprice()));
+		productEntity.setStockvalue(productEntity.getPrice()*productEntity.getQuantity());
+		return productEntity;
+	}
+}

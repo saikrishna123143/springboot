@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>role</th>
+                <th>salary</th>
+                <th>location</th>
+                <th>shift</th>
+                <th>daPer(%)</th>
+                <th>pfPer</th>
+                <th>da</th>
+                <th>pf(%)</th>
+                <th>netsal</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example of how the product list can be dynamically populated using Thymeleaf -->
+            <!-- Assuming 'products' is the list of products passed from the Spring controller -->
+            <tr th:each="emp : ${employees}">
+                <td th:text="${emp.id}"></td>
+                <td th:text="${emp.name}"></td>
+                <td th:text="${emp.role}"></td>
+                <td th:text="${emp.salary}"></td>
+                <td th:text="${emp.location}"></td>
+                <td th:text="${emp.shift}"></td>
+                <td th:text="${emp.daPer}"></td>
+                <td th:text="${emp.pfPer}"></td>
+                <td th:text="${emp.da}"></td>
+                <td th:text="${emp.pf}"></td>
+                <td th:text="${emp.netsal}"></td>
+                
+            </tr>
+            <!-- If there are no products -->
+            <tr th:if="${#lists.isEmpty(employees)}">
+                <td colspan="12" style="text-align: center;">No employees available</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
