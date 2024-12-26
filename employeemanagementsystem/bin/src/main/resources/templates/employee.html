@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee List</title>
+    <title>Employee Details</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,50 +30,47 @@
             text-align: center;
             color: #0078d4;
         }
-        table {
+        .details {
+            display: table;
             width: 100%;
-            border-collapse: collapse;
             margin: 20px 0;
         }
-        table, th, td {
+        .details div {
+            display: table-row;
+        }
+        .details div span {
+            display: table-cell;
+            padding: 10px;
             border: 1px solid #ddd;
         }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
+        .details div span.label {
             background-color: #0078d4;
             color: white;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>User List</h1>
+        <h1>Employee Details</h1>
     </div>
 
     <div class="content">
-        <h2>List of users</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>name</th>
-                    <th>password</th>
-                    <th>email</th>
-                    <th>mobile</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="employee : ${balayya}">
-                    <td th:text="${employee.name}"></td>
-                    <td th:text="${employee.password}"></td>
-                    <td th:text="${employee.email}"></td>
-                    <td th:text="${employee.mobile}"></td>
-                    <td><a href="">make as employee</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <h2>Applicant Information</h2>
+        <div class="details">
+            <div>
+                <span class="label">Name</span>
+                <span th:text="${balayya.name}"></span>
+            </div>
+            <div>
+                <span class="label">Email</span>
+                <span th:text="${balayya.email}"></span>
+            </div>
+            <div>
+                <span class="label">Mobile</span>
+                <span th:text="${balayya.mobile}"></span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
